@@ -1,61 +1,45 @@
-:root {
-    --gold: #FFB400;
-    --dark-bg: #050505;
-    --card-glass: rgba(255, 255, 255, 0.05);
-}
-
+:root { --gold: #FFB400; --bg: #050505; --glass: rgba(255, 255, 255, 0.05); }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background: var(--dark-bg); color: #fff; line-height: 1.6; scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: #fff; line-height: 1.7; scroll-behavior: smooth; }
 
 /* NAVBAR */
-.navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; position: fixed; width: 100%; z-index: 1000; background: rgba(0,0,0,0.9); backdrop-filter: blur(10px); }
-.logo { font-weight: 800; font-size: 1.3rem; }
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; position: fixed; width: 100%; z-index: 1000; background: rgba(0,0,0,0.95); border-bottom: 1px solid #222; }
 .logo span { color: var(--gold); }
 .nav-links { display: flex; list-style: none; gap: 20px; }
-.nav-links a { text-decoration: none; color: #ddd; font-size: 0.9rem; transition: 0.3s; }
-.nav-links a:hover { color: var(--gold); }
-.cta-nav { background: var(--gold); color: #000; padding: 10px 20px; border-radius: 5px; font-weight: bold; text-decoration: none; }
+.nav-links a { text-decoration: none; color: #ccc; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+.cta-nav { background: var(--gold); color: #000; padding: 8px 15px; border-radius: 4px; font-weight: bold; text-decoration: none; }
 
-/* HERO (THE SPARK BACKGROUND) */
+/* HERO (Molten Sparks) */
 .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1565043666747-69f6646db940?q=80&w=2074&auto=format&fit=crop'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; }
-.hero-content { max-width: 900px; padding: 20px; }
-.badge { border: 1px solid var(--gold); color: var(--gold); padding: 5px 15px; border-radius: 50px; font-size: 0.75rem; letter-spacing: 2px; }
-.hero h1 { font-size: 4rem; margin-top: 20px; }
+.hero h1 { font-size: clamp(2rem, 5vw, 4rem); font-weight: 800; margin: 20px 0; }
 .hero h1 span { color: var(--gold); }
-.btn-main { background: var(--gold); color: #000; padding: 15px 30px; display: inline-block; text-decoration: none; font-weight: bold; margin-top: 30px; border-radius: 5px; }
-.btn-outline { border: 1px solid #fff; color: #fff; padding: 15px 30px; display: inline-block; text-decoration: none; margin-left: 15px; border-radius: 5px; }
+.btn-main { background: var(--gold); color: #000; padding: 15px 35px; text-decoration: none; font-weight: 800; border-radius: 5px; display: inline-block; }
+.btn-outline { border: 2px solid #fff; color: #fff; padding: 13px 35px; text-decoration: none; font-weight: 800; border-radius: 5px; display: inline-block; margin-left: 10px; }
 
-/* SECTIONS */
-.section-padding { padding: 80px 5%; }
-.container { max-width: 1200px; margin: auto; }
-.gold-text { color: var(--gold); font-weight: bold; }
-.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 10px; }
-.section-subtitle { text-align: center; color: #aaa; margin-bottom: 50px; }
+/* GRID SYSTEMS */
+.container { max-width: 1200px; margin: auto; padding: 0 20px; }
+.section-padding { padding: 100px 0; }
+.dark-bg { background: #0a0a0a; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+.gold-text { color: var(--gold); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
 
-/* SERVICE CARDS */
-.service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-.service-card { background: var(--card-glass); padding: 30px; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: 0.3s; }
-.service-card:hover { border-color: var(--gold); transform: translateY(-5px); }
-.service-card h3 { color: var(--gold); margin-bottom: 15px; }
+/* PROCESS CARDS */
+.process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 0 5%; }
+.p-card { background: var(--glass); border: 1px solid #222; padding: 30px; border-radius: 10px; transition: 0.3s; }
+.p-card:hover { border-color: var(--gold); background: rgba(255, 180, 0, 0.05); }
+.p-card h3 { color: var(--gold); margin-bottom: 10px; font-size: 1.1rem; }
 
-/* TECHNICAL GRID */
-.technical-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-.tech-box ul { list-style: none; margin-top: 20px; }
-.tech-box li { margin-bottom: 10px; padding-left: 20px; position: relative; }
-.tech-box li::before { content: "—"; position: absolute; left: 0; color: var(--gold); }
+/* HIGHLIGHT BOXES */
+.highlight-box { background: rgba(255, 180, 0, 0.03); border-left: 4px solid var(--gold); padding: 40px; }
+.highlight-box ul { list-style: none; margin-top: 15px; }
+.highlight-box li { padding: 8px 0; border-bottom: 1px solid #222; }
 
-/* BENEFITS GLASS CARD */
-.benefits-glass { background: rgba(255, 180, 0, 0.05); border: 1px solid var(--gold); padding: 50px; border-radius: 20px; }
-.benefit-item { margin-top: 20px; }
-.benefit-item strong { color: var(--gold); font-size: 1.2rem; }
+/* BENEFITS */
+.benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center; margin-top: 50px; }
+.b-item h4 { color: var(--gold); margin-bottom: 15px; }
 
 /* FOOTER */
-.footer { background: #000; padding: 60px 5% 20px; border-top: 1px solid #222; }
-.footer-container { display: grid; grid-template-columns: 2fr 1fr; gap: 50px; }
-.footer-links a { display: block; color: #aaa; text-decoration: none; margin-top: 10px; }
-.copyright { text-align: center; padding-top: 40px; font-size: 0.8rem; color: #555; }
-
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .technical-grid { grid-template-columns: 1fr; }
-}
+.footer { background: #000; padding: 80px 5% 30px; border-top: 1px solid #222; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 50px; }
+.f-links a { display: block; color: #666; text-decoration: none; margin-bottom: 10px; }
+.f-links a:hover { color: var(--gold); }
