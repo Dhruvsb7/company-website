@@ -1,135 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brihaspati Non-Ferrous Metal Foundry</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XYZ Foundry Ultra</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
+
 <body>
 
-    <nav class="navbar">
-        <div class="logo">BRIHASPATI <span>FOUNDRY</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">Company</a></li>
-            <li><a href="#services">Casting</a></li>
-            <li><a href="#materials">Material</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#certification">Certification</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-    </nav>
+<canvas id="moltenCanvas"></canvas>
+<div class="cursor"></div>
 
-    <header class="hero-split">
-        <div class="hero-item" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1565043666747-69f6646db940?q=80&w=2074');">
-            <h1>Get Best Non-Ferrous <br><span>Solution From Us</span></h1>
-        </div>
-        <div class="hero-item" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070');">
-            <h1>Precision Engineering <br><span>From At Its Finest</span></h1>
-        </div>
-    </header>
+<header>
+<h1>XYZ FOUNDRY</h1>
+<nav>
+<a href="#">Home</a>
+<a href="#">Capabilities</a>
+<a href="#">Process</a>
+<a href="#">AI RFQ</a>
+</nav>
+</header>
 
-    <div class="quality-bar">
-        <h2>Get Products to Perfection with Severe Quality Control Applied at All Levels</h2>
-    </div>
+<section class="hero">
+<h2>Forging Metal Into Precision</h2>
+<p>Next-Gen AI Industrial Casting Systems</p>
+<button class="btn">Launch AI Quote</button>
+</section>
 
-    <section class="section section-about" id="about">
-        <div class="container">
-            <h2 class="gold-text">About Brihaspati Non Ferrous Metal Foundry</h2>
-            <p>Established in 2023, Brihaspati Non Ferrous Metal Foundry is a technologically advanced manufacturing unit specializing in high-integrity non-ferrous and stainless steel castings. We focus on delivering precision-engineered components that meet global quality standards.</p>
-            <p>Our expertise spans Green Sand casting, CO₂ molding, No-Bake molding, and Centrifugal casting, serving industries where reliability, corrosion resistance, and durability are critical. With a 10,000 sq. mt. facility in Kittur, Belagavi, Karnataka, we combine modern infrastructure, skilled professionals, and strict quality control.</p>
-        </div>
-    </section>
+<section class="section reveal">
+<h2>Capabilities</h2>
+<div class="grid">
+<div class="card">Grey Iron Casting</div>
+<div class="card">SG Iron Casting</div>
+<div class="card">CNC Machining</div>
+<div class="card">Robotic Inspection</div>
+</div>
+</section>
 
-    <section class="section dark-bg" id="services">
-        <div class="container">
-            <h2 class="center">Our Specialized Services</h2>
-            <p class="center-sub">From complex non-ferrous castings to high-precision sand and centrifugal casting solutions...</p>
+<section class="section dark reveal">
+<h2>Manufacturing Flow</h2>
+<div class="flow">
+<div>Moulding</div>
+<div>Melting</div>
+<div>Pouring</div>
+<div>Machining</div>
+<div>Inspection</div>
+</div>
+</section>
 
-            <div class="service-block">
-                <h3>General Engineering Casting and Machined Components</h3>
-                <div class="grid-2">
-                    <div class="card">
-                        <h4>Copper Alloy Casting</h4>
-                        <p>Durable copper alloy components manufactured with high dimensional accuracy. Used in engineering applications requiring excellent conductivity and corrosion resistance.</p>
-                    </div>
-                    <div class="card">
-                        <h4>Stainless Steel Casting</h4>
-                        <p>High-precision stainless steel parts produced through advanced casting and machining processes.</p>
-                    </div>
-                </div>
-            </div>
+<section class="section reveal">
+<h2>AI Request For Quote</h2>
+<form class="form">
+<input placeholder="Company Name">
+<input placeholder="Email">
+<textarea placeholder="Project Details"></textarea>
+<button>Submit Request</button>
+</form>
+</section>
 
-            <div class="service-block">
-                <h3>CO₂ Mould Casting Components</h3>
-                <div class="grid-2">
-                    <div class="card">
-                        <h4>CO₂ Copper Alloy</h4>
-                        <p>Known for good strength and dimensional stability. Ideal for medium to large engineering components.</p>
-                    </div>
-                    <div class="card">
-                        <h4>CO₂ Stainless Steel</h4>
-                        <p>Providing reliable structural integrity. Widely used in industrial and heavy engineering.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<footer>
+<p>© 2026 XYZ Foundry Ultra Systems</p>
+</footer>
 
-    <section class="section">
-        <div class="container glass-box">
-            <h2 class="gold-text">Non-Ferrous Casting Manufacturers & Suppliers</h2>
-            <p>Brihaspati Pvt. Ltd., leading Non-Ferrous Casting manufacturers based in India, offers better design capability, casting integrity and close tolerances. The process provides secured quality assurance, inexpensive tooling and shorter lead times. It proves to be cost-effective for prototype development and allows superior design for simple to highly complicated products.</p>
-        </div>
-    </section>
-
-    <section class="section dark-bg">
-        <div class="container grid-3">
-            <div class="feat-card"><h4>CO₂ Sand Casting</h4><p>Strong, rigid molds for complex geometries.</p></div>
-            <div class="feat-card"><h4>No-Bake Mold</h4><p>Ideal for large and complex castings.</p></div>
-            <div class="feat-card"><h4>Gravity Die Casting</h4><p>Permanent molds for dense components.</p></div>
-            <div class="feat-card"><h4>Shell Mold Casting</h4><p>Excellent surface finish and precision.</p></div>
-            <div class="feat-card"><h4>Centrifugal Casting</h4><p>Defect-free, high-density components.</p></div>
-            <div class="feat-card"><h4>Process Versatility</h4><p>Selection of method based on size, complexity, and alloy type.</p></div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container grid-2">
-            <div class="list-box">
-                <h3 class="gold-text">Consistent Quality Output</h3>
-                <ul>
-                    <li>Stable and repeatable casting processes.</li>
-                    <li>Strict control over metallurgy and solidification.</li>
-                    <li>High integrity castings with reduced defects.</li>
-                    <li>Optimized cost without compromising performance.</li>
-                </ul>
-            </div>
-            <div class="list-box gold-border">
-                <h3 class="gold-text">Benefits of Working with Us</h3>
-                <p>✓ Uncompromising quality control.</p>
-                <p>✓ Strong engineering support.</p>
-                <p>✓ Reliable delivery commitments.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer" id="contact">
-        <div class="container footer-grid">
-            <div class="footer-info">
-                <h3>Contact Us</h3>
-                <p>📞 +91 83104 32701</p>
-                <p>📍 Plot No. 70, Road No. 8, KIADB Industrial Area, Kittur, Belagavi 591115</p>
-                <p>✉️ info@brihaspatifoundry.com</p>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <a href="#home">Home</a><br><a href="#about">About Us</a><br><a href="#products">Products</a>
-            </div>
-        </div>
-    </footer>
-
+<script src="js/script.js"></script>
 </body>
 </html>
