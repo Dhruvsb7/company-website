@@ -1,72 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>XYZ Foundry Ultra</title>
-
-<link rel="stylesheet" href="css/style.css">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ Foundry - Precision Metal Casting & Manufacturing</title>
+    <meta name="description" content="XYZ Foundry specializes in high-quality metal casting, machining, and prototyping for industries worldwide. Discover our expertise.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <header>
+        <nav>
+            <div class="logo">XYZ Foundry</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<canvas id="moltenCanvas"></canvas>
-<div class="cursor"></div>
+    <section id="hero">
+        <video autoplay muted loop id="hero-video">
+            <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4"> <!-- Replace with molten metal video -->
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>Precision Casting, Unmatched Quality</h1>
+            <p>At XYZ Foundry, we transform raw metal into engineering marvels. From prototypes to production runs, we deliver excellence.</p>
+            <a href="contact.html" class="cta-button">Get a Quote</a>
+        </div>
+    </section>
 
-<header>
-<h1>XYZ FOUNDRY</h1>
-<nav>
-<a href="#">Home</a>
-<a href="#">Capabilities</a>
-<a href="#">Process</a>
-<a href="#">AI RFQ</a>
-</nav>
-</header>
+    <section id="overview">
+        <h2>Why Choose XYZ Foundry?</h2>
+        <div class="features">
+            <div class="feature">
+                <img src="https://via.placeholder.com/300x200/333/fff?text=Advanced+Tech" alt="Advanced Technology">
+                <h3>State-of-the-Art Equipment</h3>
+                <p>Our foundry uses cutting-edge CNC machines and 3D printing for precise casting.</p>
+            </div>
+            <div class="feature">
+                <img src="https://via.placeholder.com/300x200/333/fff?text=Expert+Team" alt="Expert Team">
+                <h3>Experienced Engineers</h3>
+                <p>Over 50 years of combined expertise in metallurgy and manufacturing.</p>
+            </div>
+            <div class="feature">
+                <img src="https://via.placeholder.com/300x200/333/fff?text=Sustainable" alt="Sustainable Practices">
+                <h3>Eco-Friendly Processes</h3>
+                <p>We prioritize sustainability with recycled materials and energy-efficient methods.</p>
+            </div>
+        </div>
+    </section>
 
-<section class="hero">
-<h2>Forging Metal Into Precision</h2>
-<p>Next-Gen AI Industrial Casting Systems</p>
-<button class="btn">Launch AI Quote</button>
-</section>
+    <footer>
+        <p>&copy; 2023 XYZ Foundry. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="https://twitter.com/xyzfoundry">Twitter</a></li>
+        </ul>
+    </footer>
 
-<section class="section reveal">
-<h2>Capabilities</h2>
-<div class="grid">
-<div class="card">Grey Iron Casting</div>
-<div class="card">SG Iron Casting</div>
-<div class="card">CNC Machining</div>
-<div class="card">Robotic Inspection</div>
-</div>
-</section>
-
-<section class="section dark reveal">
-<h2>Manufacturing Flow</h2>
-<div class="flow">
-<div>Moulding</div>
-<div>Melting</div>
-<div>Pouring</div>
-<div>Machining</div>
-<div>Inspection</div>
-</div>
-</section>
-
-<section class="section reveal">
-<h2>AI Request For Quote</h2>
-<form class="form">
-<input placeholder="Company Name">
-<input placeholder="Email">
-<textarea placeholder="Project Details"></textarea>
-<button>Submit Request</button>
-</form>
-</section>
-
-<footer>
-<p>© 2026 XYZ Foundry Ultra Systems</p>
-</footer>
-
-<script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
