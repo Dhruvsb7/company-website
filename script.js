@@ -1,53 +1,22 @@
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.from(".hero h2",{y:-120,opacity:0,duration:1});
-gsap.from(".hero p",{opacity:0,delay:0.5});
-
-gsap.utils.toArray(".reveal").forEach(sec=>{
-gsap.from(sec,{
-scrollTrigger:sec,
-opacity:0,
-y:150,
-duration:1
-});
+// Simple mobile menu toggle
+const navUl = document.querySelector('nav ul');
+document.querySelector('.logo').addEventListener('click', () => {
+    navUl.classList.toggle('show');
 });
 
-document.addEventListener("mousemove",e=>{
-document.querySelector(".cursor").style.left=e.clientX+"px";
-document.querySelector(".cursor").style.top=e.clientY+"px";
+// Fade-in animation on scroll
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
 });
 
-const canvas=document.getElementById("moltenCanvas");
-const ctx=canvas.getContext("2d");
-
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
-
-let particles=[];
-
-for(let i=0;i<60;i++){
-particles.push({
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-r:Math.random()*3+1,
-v:Math.random()*1+0.5
+document.querySelectorAll('.feature').forEach(el => {
+    el.style.opacity = 0;
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s, transform 0.6s';
+    observer.observe(el);
 });
-}
-
-function animate(){
-ctx.fillStyle="rgba(0,0,0,0.2)";
-ctx.fillRect(0,0,canvas.width,canvas.height);
-
-ctx.fillStyle="#ff6a00";
-particles.forEach(p=>{
-p.y-=p.v;
-if(p.y<0)p.y=canvas.height;
-ctx.beginPath();
-ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-ctx.fill();
-});
-requestAnimationFrame(animate);
-}
-
-animate();
-
